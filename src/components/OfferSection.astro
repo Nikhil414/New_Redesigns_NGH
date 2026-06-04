@@ -1,0 +1,54 @@
+---
+import GradientButton from './GradientButton.astro';
+
+const offerItems = [
+  { label: "FREE Website Audit", note: "(Worth ₹5,000)" },
+  { label: "FREE Growth Strategy Session", note: "" },
+  { label: "FREE Homepage Conversion Review", note: "" },
+];
+---
+<section class="py-16 bg-white">
+  <div class="max-w-6xl mx-auto px-4">
+    <div class="grid grid-cols-1 lg:grid-cols-2 gap-6">
+
+      <!-- Left: Offer -->
+      <div class="bg-gradient-to-br from-yellow-50 to-orange-50 border border-orange-100 rounded-2xl p-8">
+        <div class="flex items-center gap-2 mb-5">
+          <span class="text-2xl">🎁</span>
+          <span class="text-orange-500 font-bold text-sm uppercase tracking-wider">Limited-Time Offer</span>
+        </div>
+        <ul class="space-y-3 mb-6">
+          {offerItems.map(item => (
+            <li class="flex items-start gap-2">
+              <svg class="w-5 h-5 text-green-500 flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M5 13l4 4L19 7" />
+              </svg>
+              <span class="text-sm text-gray-700 font-medium">
+                {item.label}
+                {item.note && <span class="text-gray-400 font-normal"> {item.note}</span>}
+              </span>
+            </li>
+          ))}
+        </ul>
+        <p class="text-xs text-gray-500">Book your consultation today and discover how your website can become your best growth asset.</p>
+      </div>
+
+      <!-- Right: CTA -->
+      <div class="bg-white border border-gray-100 rounded-2xl p-8 shadow-sm flex flex-col justify-center">
+        <h3 class="text-xl lg:text-2xl font-extrabold text-gray-900 mb-3 leading-tight">
+          READY TO GROW YOUR<br />BUSINESS ONLINE?
+        </h3>
+        <p class="text-sm text-gray-600 mb-6 leading-relaxed">
+          Book your FREE Website Growth Consultation today. No obligation. No pressure.
+          Just a clear strategy for your growth.
+        </p>
+        <div>
+          <GradientButton href="#booking" class="px-7 py-3.5">
+            📅 BOOK FREE CONSULTATION
+          </GradientButton>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
