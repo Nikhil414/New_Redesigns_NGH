@@ -44,7 +44,16 @@ const navLinks = [
   </div>
 
   <!-- Mobile menu -->
-  <div id="nav-menu" class="hidden md:hidden bg-white border-t border-gray-100 px-4 pb-4 pt-2">
+  <div id="nav-menu" class="hidden md:hidden bg-white border-t border-gray-100 px-4 pb-4 pt-3">
+
+    <!-- Mobile branding strip -->
+    <div class="flex items-center gap-3 py-3 mb-2 border-b border-gray-100">
+      <img src="/NGH_LOGO.png" alt="Niirmaan Growth Hub" class="h-10 w-auto object-contain" />
+      <span class="text-xs font-bold text-gray-700 uppercase tracking-wide leading-tight">
+        Free Website Audit +<br />Growth Strategy Call
+      </span>
+    </div>
+
     {navLinks.map(link => (
       <a href={link.href} class="block py-3 text-base text-gray-700 hover:text-orange-500 font-medium border-b border-gray-50">
         {link.label}
