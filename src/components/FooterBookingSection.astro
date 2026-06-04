@@ -1,28 +1,65 @@
 ---
 const socials = [
-  { label: "F", title: "Facebook" },
-  { label: "I", title: "Instagram" },
-  { label: "T", title: "Twitter" },
-  { label: "L", title: "LinkedIn" },
+  { label: "f", title: "Facebook", href: "#" },
+  { label: "in", title: "Instagram", href: "#" },
+  { label: "t", title: "Twitter", href: "#" },
+  { label: "li", title: "LinkedIn", href: "#" },
+];
+
+const services = [
+  "Business Websites",
+  "E-Commerce Stores",
+  "Landing Pages",
+  "SEO Optimization",
+  "Digital Marketing",
+  "Branding & Design",
+];
+
+const quickLinks = [
+  { label: "Home", href: "#home" },
+  { label: "Services", href: "#services" },
+  { label: "Portfolio", href: "#results" },
+  { label: "Process", href: "#process" },
+  { label: "About Us", href: "#about" },
+  { label: "FAQs", href: "#faq" },
 ];
 ---
-<section id="booking" class="py-16 bg-gradient-to-br from-blue-50 to-sky-100">
-  <div class="max-w-6xl mx-auto px-4">
 
-    <!-- Brand -->
-    <div class="flex flex-col items-center text-center">
-      <img src="/NGH_LOGO.png" alt="Niirmaan Growth Hub" class="h-24 w-auto mb-3" />
-      <p class="text-xs text-gray-500 mb-6 leading-relaxed">
-        360&deg; Digital Solutions Agency<br />
-        Web Development | SEO | Digital Marketing | Branding<br />
-        Helping businesses grow with smart digital solutions
+<footer id="booking" class="bg-gray-900 text-white">
+
+  <!-- Top CTA Band -->
+  <div class="bg-gradient-to-r from-pink-500 via-orange-400 to-yellow-400 py-10">
+    <div class="max-w-6xl mx-auto px-4 flex flex-col md:flex-row items-center justify-between gap-6">
+      <div>
+        <h2 class="text-2xl md:text-3xl font-extrabold text-white leading-tight">
+          Ready to Grow Your Business Online?
+        </h2>
+        <p class="text-white/80 text-sm mt-1">Let's build something great together — free consultation, no strings attached.</p>
+      </div>
+      <a
+        href="mailto:hello@niirmaangrowth.com"
+        class="shrink-0 bg-white text-orange-500 font-bold text-sm px-7 py-3.5 rounded-full hover:bg-gray-100 transition-colors shadow-md"
+      >
+        📅 Book Free Consultation
+      </a>
+    </div>
+  </div>
+
+  <!-- Main Footer Grid -->
+  <div class="max-w-6xl mx-auto px-4 py-14 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-10">
+
+    <!-- Brand Column -->
+    <div class="lg:col-span-1">
+      <img src="/NGH_LOGO.png" alt="Niirmaan Growth Hub" class="h-20 w-auto mb-4 brightness-0 invert" />
+      <p class="text-gray-400 text-sm leading-relaxed mb-5">
+        360° Digital Solutions Agency helping businesses grow with smart, conversion-focused digital strategies.
       </p>
-      <div class="flex items-center gap-3">
+      <div class="flex items-center gap-2">
         {socials.map(s => (
           <a
-            href="#"
+            href={s.href}
             title={s.title}
-            class="w-8 h-8 rounded-full bg-gradient-to-br from-pink-500 to-orange-400 flex items-center justify-center text-white text-xs font-bold hover:opacity-80 transition-opacity"
+            class="w-9 h-9 rounded-full border border-gray-700 flex items-center justify-center text-gray-400 text-xs font-bold hover:border-orange-400 hover:text-orange-400 transition-colors"
           >
             {s.label}
           </a>
@@ -30,9 +67,76 @@ const socials = [
       </div>
     </div>
 
-    <!-- Footer bottom bar -->
-    <div class="mt-12 pt-6 border-t border-sky-200 text-center text-xs text-gray-500">
-      &copy; 2026 Niirmaan Growth Hub. All rights reserved.
+    <!-- Services Column -->
+    <div>
+      <h4 class="text-white font-bold text-sm uppercase tracking-widest mb-5">Services</h4>
+      <ul class="space-y-2.5">
+        {services.map(service => (
+          <li>
+            <a href="#services" class="text-gray-400 text-sm hover:text-orange-400 transition-colors flex items-center gap-2">
+              <span class="w-1 h-1 rounded-full bg-orange-400 shrink-0"></span>
+              {service}
+            </a>
+          </li>
+        ))}
+      </ul>
+    </div>
+
+    <!-- Quick Links Column -->
+    <div>
+      <h4 class="text-white font-bold text-sm uppercase tracking-widest mb-5">Quick Links</h4>
+      <ul class="space-y-2.5">
+        {quickLinks.map(link => (
+          <li>
+            <a href={link.href} class="text-gray-400 text-sm hover:text-orange-400 transition-colors flex items-center gap-2">
+              <span class="w-1 h-1 rounded-full bg-orange-400 shrink-0"></span>
+              {link.label}
+            </a>
+          </li>
+        ))}
+      </ul>
+    </div>
+
+    <!-- Contact Column -->
+    <div>
+      <h4 class="text-white font-bold text-sm uppercase tracking-widest mb-5">Get In Touch</h4>
+      <ul class="space-y-4">
+        <li class="flex items-start gap-3">
+          <span class="mt-0.5 text-orange-400 text-base">📧</span>
+          <div>
+            <div class="text-xs text-gray-500 mb-0.5">Email</div>
+            <a href="mailto:hello@niirmaangrowth.com" class="text-gray-300 text-sm hover:text-orange-400 transition-colors">hello@niirmaangrowth.com</a>
+          </div>
+        </li>
+        <li class="flex items-start gap-3">
+          <span class="mt-0.5 text-orange-400 text-base">📞</span>
+          <div>
+            <div class="text-xs text-gray-500 mb-0.5">Phone</div>
+            <a href="tel:+911234567890" class="text-gray-300 text-sm hover:text-orange-400 transition-colors">+91 12345 67890</a>
+          </div>
+        </li>
+        <li class="flex items-start gap-3">
+          <span class="mt-0.5 text-orange-400 text-base">📍</span>
+          <div>
+            <div class="text-xs text-gray-500 mb-0.5">Location</div>
+            <span class="text-gray-300 text-sm">India</span>
+          </div>
+        </li>
+      </ul>
+    </div>
+
+  </div>
+
+  <!-- Bottom Bar -->
+  <div class="border-t border-gray-800">
+    <div class="max-w-6xl mx-auto px-4 py-5 flex flex-col sm:flex-row items-center justify-between gap-3 text-xs text-gray-500">
+      <span>&copy; 2026 Niirmaan Growth Hub. All rights reserved.</span>
+      <span class="flex items-center gap-1">
+        Built with
+        <span class="text-orange-400 font-semibold">♥</span>
+        for growing businesses
+      </span>
     </div>
   </div>
-</section>
+
+</footer>
