@@ -3,22 +3,25 @@ import SectionHeading from './SectionHeading.astro';
 
 const results = [
   {
-    bg: "bg-blue-700",
-    label: "Real Estate Business",
-    title: "Real Estate Business",
+    url: "https://xfactorrsportsandevents.com/",
+    title: "XFactorr Sports & Events",
+    category: "Sports & Events",
     metric: "120% Increase in Leads",
+    screenshot: "https://image.thum.io/get/width/600/crop/400/https://xfactorrsportsandevents.com/",
   },
   {
-    bg: "bg-gray-800",
-    label: "Fitness Coach",
-    title: "Fitness Coach",
+    url: "https://shaktiowntheenergy.com/",
+    title: "Shakti Own The Energy",
+    category: "Fitness & Wellness",
     metric: "85% Increase in Bookings",
+    screenshot: "https://image.thum.io/get/width/600/crop/400/https://shaktiowntheenergy.com/",
   },
   {
-    bg: "bg-amber-100",
-    label: "E-Commerce Store",
-    title: "E-Commerce Store",
-    metric: "150% Increase in Sales",
+    url: "https://niirmaan360.com/",
+    title: "Niirmaan 360",
+    category: "Digital Agency",
+    metric: "150% Increase in Online Presence",
+    screenshot: "https://image.thum.io/get/width/600/crop/400/https://niirmaan360.com/",
   },
 ];
 ---
@@ -27,15 +30,42 @@ const results = [
     <SectionHeading title="RECENT RESULTS" />
     <div class="grid grid-cols-1 md:grid-cols-3 gap-6 mb-8">
       {results.map(result => (
-        <div class="bg-white border border-gray-100 rounded-xl overflow-hidden shadow-sm hover:shadow-md transition-shadow">
-          <div class={`${result.bg} h-44 flex items-center justify-center`}>
-            <span class={`text-sm font-semibold px-4 text-center ${result.bg === 'bg-amber-100' ? 'text-gray-700' : 'text-white'}`}>
-              {result.label}
-            </span>
+        <div class="group bg-white border border-gray-100 rounded-xl overflow-hidden shadow-sm hover:shadow-xl transition-all duration-300">
+
+          <!-- Screenshot with hover overlay -->
+          <div class="relative h-48 overflow-hidden bg-gray-100">
+            <img
+              src={result.screenshot}
+              alt={result.title}
+              class="w-full h-full object-cover object-top group-hover:scale-105 transition-transform duration-500"
+              loading="lazy"
+            />
+            <!-- Hover overlay -->
+            <div class="absolute inset-0 bg-gradient-to-t from-black/70 via-black/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end justify-center pb-4">
+              <a
+                href={result.url}
+                target="_blank"
+                rel="noopener noreferrer"
+                class="inline-flex items-center gap-1.5 bg-white text-gray-900 text-xs font-bold px-4 py-2 rounded-full hover:bg-orange-500 hover:text-white transition-colors"
+              >
+                Visit Site
+                <svg class="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
+                </svg>
+              </a>
+            </div>
           </div>
+
+          <!-- Card info -->
           <div class="p-4">
+            <span class="inline-block text-xs font-medium text-orange-500 bg-orange-50 px-2 py-0.5 rounded mb-2">
+              {result.category}
+            </span>
             <h3 class="text-sm font-semibold text-gray-800 mb-2">{result.title}</h3>
-            <span class="inline-block bg-green-50 text-green-700 text-xs font-semibold px-2.5 py-0.5 rounded-full">
+            <span class="inline-flex items-center gap-1 bg-green-50 text-green-700 text-xs font-semibold px-2.5 py-0.5 rounded-full">
+              <svg class="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M13 7h8m0 0v8m0-8l-8 8-4-4-6 6" />
+              </svg>
               {result.metric}
             </span>
           </div>
