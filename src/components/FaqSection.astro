@@ -36,7 +36,7 @@ const faqs = [
         <div class="faq-item bg-white border border-gray-100 rounded-xl shadow-sm overflow-hidden">
           <button
             class="faq-trigger w-full flex items-center justify-between px-5 py-4 text-left text-sm font-semibold text-gray-800 hover:text-orange-500 transition-colors gap-3"
-            data-index={i}
+            aria-expanded="false"
           >
             <span>{faq.q}</span>
             <svg
@@ -65,6 +65,8 @@ const faqs = [
       const icon = trigger.querySelector('.faq-icon');
       answer?.classList.toggle('hidden');
       icon?.classList.toggle('rotate-180');
+      const isOpen = !answer?.classList.contains('hidden');
+      trigger.setAttribute('aria-expanded', String(isOpen));
     });
   });
 </script>
