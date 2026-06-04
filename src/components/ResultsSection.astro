@@ -1,0 +1,54 @@
+---
+import SectionHeading from './SectionHeading.astro';
+
+const results = [
+  {
+    bg: "bg-blue-700",
+    label: "Real Estate Business",
+    title: "Real Estate Business",
+    metric: "120% Increase in Leads",
+  },
+  {
+    bg: "bg-gray-800",
+    label: "Fitness Coach",
+    title: "Fitness Coach",
+    metric: "85% Increase in Bookings",
+  },
+  {
+    bg: "bg-amber-100",
+    label: "E-Commerce Store",
+    title: "E-Commerce Store",
+    metric: "150% Increase in Sales",
+  },
+];
+---
+<section id="results" class="py-16 bg-white">
+  <div class="max-w-6xl mx-auto px-4">
+    <SectionHeading title="RECENT RESULTS" />
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-6 mb-8">
+      {results.map(result => (
+        <div class="bg-white border border-gray-100 rounded-xl overflow-hidden shadow-sm hover:shadow-md transition-shadow">
+          <div class={`${result.bg} h-44 flex items-center justify-center`}>
+            <span class={`text-sm font-semibold px-4 text-center ${result.bg === 'bg-amber-100' ? 'text-gray-700' : 'text-white'}`}>
+              {result.label}
+            </span>
+          </div>
+          <div class="p-4">
+            <h3 class="text-sm font-semibold text-gray-800 mb-2">{result.title}</h3>
+            <span class="inline-block bg-green-50 text-green-700 text-xs font-semibold px-2.5 py-0.5 rounded-full">
+              {result.metric}
+            </span>
+          </div>
+        </div>
+      ))}
+    </div>
+    <div class="text-center">
+      <a href="#contact" class="inline-flex items-center gap-1 text-sm text-orange-500 font-semibold hover:text-orange-600 transition-colors">
+        VIEW MORE OUR WORK
+        <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
+        </svg>
+      </a>
+    </div>
+  </div>
+</section>
