@@ -3,125 +3,149 @@ import BaseLayout from '../layouts/BaseLayout.astro';
 ---
 <BaseLayout title="Thank You | Niirmaan Growth Hub" description="Your strategy call is confirmed. We look forward to helping your business grow online.">
 
-  <div class="min-h-screen bg-gradient-to-br from-pink-50 via-white to-orange-50 flex items-center justify-center px-4 py-12">
-    <div class="w-full max-w-lg bg-white rounded-3xl shadow-xl px-6 py-10 sm:px-10 text-center">
+  <div class="min-h-screen bg-[#f3f0ff] flex items-center justify-center px-4 py-10">
+    <div class="w-full max-w-[500px] bg-white rounded-3xl shadow-2xl overflow-hidden">
 
-      <!-- Checkmark -->
-      <div class="relative inline-flex items-center justify-center mb-5">
-        <!-- Confetti dots -->
-        <span class="absolute -top-3 -left-4 w-2 h-2 rounded-full bg-pink-400 opacity-70"></span>
-        <span class="absolute -top-1 right-0 w-1.5 h-1.5 rounded-full bg-yellow-400 opacity-80"></span>
-        <span class="absolute top-2 -right-5 w-2 h-2 rounded-full bg-orange-400 opacity-60"></span>
-        <span class="absolute -bottom-2 -left-5 w-1.5 h-1.5 rounded-full bg-green-400 opacity-70"></span>
-        <span class="absolute bottom-0 right-2 w-2 h-2 rounded-full bg-pink-300 opacity-60"></span>
-        <div class="w-20 h-20 rounded-full bg-green-50 border-2 border-green-100 flex items-center justify-center">
-          <svg class="w-10 h-10 text-green-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M5 13l4 4L19 7" />
-          </svg>
-        </div>
-      </div>
+      <!-- Top section with confetti + check -->
+      <div class="pt-10 pb-2 px-8 text-center">
 
-      <!-- Heading -->
-      <h1 class="text-5xl sm:text-6xl font-extrabold leading-tight mb-2">
-        <span class="text-transparent bg-clip-text bg-gradient-to-r from-pink-500 via-orange-400 to-yellow-400">Thank You!</span>
-      </h1>
-      <h2 class="text-xl sm:text-2xl font-bold text-gray-900 mb-3">
-        Your Strategy Call is Confirmed 🎉
-      </h2>
-      <p class="text-gray-500 text-sm sm:text-base leading-relaxed mb-7">
-        We've sent the meeting details to your email.<br />
-        We look forward to helping your business grow online.
-      </p>
-
-      <!-- Date & Time card -->
-      <div class="bg-gray-50 border border-gray-100 rounded-2xl p-5 grid grid-cols-2 divide-x divide-gray-200 mb-7">
-        <div class="flex items-center gap-3 pr-4">
-          <div class="w-10 h-10 rounded-full bg-pink-50 flex items-center justify-center shrink-0">
-            <svg class="w-5 h-5 text-pink-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z" />
+        <!-- Confetti + Checkmark -->
+        <div class="relative inline-flex items-center justify-center mb-6">
+          <!-- confetti dashes -->
+          <span class="absolute" style="top:-18px;left:10px;width:18px;height:5px;background:#fbbf24;border-radius:3px;transform:rotate(-30deg);opacity:0.9;"></span>
+          <span class="absolute" style="top:-14px;right:14px;width:14px;height:4px;background:#f87171;border-radius:3px;transform:rotate(25deg);opacity:0.85;"></span>
+          <span class="absolute" style="top:4px;left:-20px;width:16px;height:4px;background:#fb923c;border-radius:3px;transform:rotate(-15deg);opacity:0.8;"></span>
+          <span class="absolute" style="top:4px;right:-22px;width:16px;height:4px;background:#a78bfa;border-radius:3px;transform:rotate(20deg);opacity:0.8;"></span>
+          <!-- confetti dots -->
+          <span class="absolute rounded-full" style="top:-8px;left:-18px;width:7px;height:7px;background:#f472b6;opacity:0.85;"></span>
+          <span class="absolute rounded-full" style="bottom:-4px;left:-14px;width:5px;height:5px;background:#fbbf24;opacity:0.8;"></span>
+          <span class="absolute rounded-full" style="bottom:-6px;right:-10px;width:6px;height:6px;background:#34d399;opacity:0.8;"></span>
+          <span class="absolute rounded-full" style="top:-12px;right:-6px;width:5px;height:5px;background:#60a5fa;opacity:0.8;"></span>
+          <!-- Circle -->
+          <div class="w-24 h-24 rounded-full bg-green-50 border-4 border-green-100 flex items-center justify-center shadow-sm">
+            <svg class="w-12 h-12 text-green-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M5 13l4 4L19 7" />
             </svg>
           </div>
-          <div class="text-left">
-            <div class="text-xs font-semibold text-gray-400 uppercase tracking-wider mb-0.5">Date</div>
-            <div class="text-sm font-bold text-gray-800">See Calendar Invite</div>
-          </div>
-        </div>
-        <div class="flex items-center gap-3 pl-4">
-          <div class="w-10 h-10 rounded-full bg-pink-50 flex items-center justify-center shrink-0">
-            <svg class="w-5 h-5 text-pink-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" />
-            </svg>
-          </div>
-          <div class="text-left">
-            <div class="text-xs font-semibold text-gray-400 uppercase tracking-wider mb-0.5">Time</div>
-            <div class="text-sm font-bold text-gray-800">See Calendar Invite</div>
-          </div>
-        </div>
-      </div>
-
-      <!-- What's Next -->
-      <h3 class="text-lg font-bold text-gray-900 mb-5">What's Next?</h3>
-      <div class="grid grid-cols-3 gap-4 mb-7">
-
-        <!-- Step 1 -->
-        <div class="flex flex-col items-center text-center">
-          <div class="w-12 h-12 rounded-full bg-pink-50 flex items-center justify-center mb-2">
-            <svg class="w-6 h-6 text-pink-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
-            </svg>
-          </div>
-          <p class="text-xs font-bold text-pink-500 mb-1">1. Check Email</p>
-          <p class="text-xs text-gray-500 leading-snug">Check your email for meeting details and calendar invite.</p>
         </div>
 
-        <!-- Step 2 -->
-        <div class="flex flex-col items-center text-center">
-          <div class="w-12 h-12 rounded-full bg-orange-50 flex items-center justify-center mb-2">
-            <svg class="w-6 h-6 text-orange-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z" />
-            </svg>
+        <!-- Thank You heading -->
+        <h1 class="font-extrabold leading-none mb-3" style="font-size:clamp(3rem,10vw,4rem);">
+          <span style="background:linear-gradient(90deg,#ec4899,#f97316,#eab308);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;">Thank You!</span>
+        </h1>
+
+        <!-- Subtitle -->
+        <h2 class="text-xl sm:text-2xl font-extrabold text-gray-900 mb-3 leading-tight">
+          Your Strategy Call is Confirmed&nbsp;🎉
+        </h2>
+
+        <!-- Body -->
+        <p class="text-gray-400 text-sm sm:text-base leading-relaxed mb-7">
+          We've sent the meeting details to your email.<br />
+          We look forward to helping your business grow online.
+        </p>
+
+        <!-- Date & Time card -->
+        <div class="bg-gray-50 rounded-2xl border border-gray-100 mb-7 overflow-hidden">
+          <div class="grid grid-cols-2">
+            <div class="flex items-center gap-3 px-5 py-4">
+              <div class="w-11 h-11 rounded-full bg-pink-100 flex items-center justify-center shrink-0">
+                <svg class="w-5 h-5 text-pink-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"/>
+                </svg>
+              </div>
+              <div class="text-left">
+                <p class="text-[10px] font-bold text-gray-400 uppercase tracking-widest mb-0.5">DATE</p>
+                <p class="text-sm font-bold text-gray-800">See Calendar Invite</p>
+              </div>
+            </div>
+            <div class="flex items-center gap-3 px-5 py-4 border-l border-gray-200">
+              <div class="w-11 h-11 rounded-full bg-pink-100 flex items-center justify-center shrink-0">
+                <svg class="w-5 h-5 text-pink-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"/>
+                </svg>
+              </div>
+              <div class="text-left">
+                <p class="text-[10px] font-bold text-gray-400 uppercase tracking-widest mb-0.5">TIME</p>
+                <p class="text-sm font-bold text-gray-800">See Calendar Invite</p>
+              </div>
+            </div>
           </div>
-          <p class="text-xs font-bold text-orange-500 mb-1">2. Add to Calendar</p>
-          <p class="text-xs text-gray-500 leading-snug">Add the call to your calendar so you don't miss it.</p>
         </div>
 
-        <!-- Step 3 -->
-        <div class="flex flex-col items-center text-center">
-          <div class="w-12 h-12 rounded-full bg-yellow-50 flex items-center justify-center mb-2">
-            <svg class="w-6 h-6 text-yellow-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 10l4.553-2.069A1 1 0 0121 8.868v6.264a1 1 0 01-1.447.894L15 14M5 18h8a2 2 0 002-2V8a2 2 0 00-2-2H5a2 2 0 00-2 2v8a2 2 0 002 2z" />
-            </svg>
+        <!-- What's Next -->
+        <h3 class="text-lg font-extrabold text-gray-900 mb-6">What's Next?</h3>
+        <div class="grid grid-cols-3 gap-3 mb-7">
+
+          <div class="flex flex-col items-center text-center">
+            <div class="w-14 h-14 rounded-full bg-pink-50 flex items-center justify-center mb-3 shadow-sm">
+              <svg class="w-7 h-7 text-pink-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/>
+              </svg>
+            </div>
+            <p class="text-xs font-bold text-pink-500 mb-1">1. Check Email</p>
+            <p class="text-xs text-gray-400 leading-snug">Check your email for meeting details and calendar invite.</p>
           </div>
-          <p class="text-xs font-bold text-yellow-500 mb-1">3. Join the Call</p>
-          <p class="text-xs text-gray-500 leading-snug">Join the call at the scheduled time using the meeting link.</p>
+
+          <div class="flex flex-col items-center text-center">
+            <div class="w-14 h-14 rounded-full bg-orange-50 flex items-center justify-center mb-3 shadow-sm">
+              <svg class="w-7 h-7 text-orange-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"/>
+              </svg>
+            </div>
+            <p class="text-xs font-bold text-orange-500 mb-1">2. Add to Calendar</p>
+            <p class="text-xs text-gray-400 leading-snug">Add the call so you don't miss it.</p>
+          </div>
+
+          <div class="flex flex-col items-center text-center">
+            <div class="w-14 h-14 rounded-full bg-yellow-50 flex items-center justify-center mb-3 shadow-sm">
+              <svg class="w-7 h-7 text-yellow-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8" d="M15 10l4.553-2.069A1 1 0 0121 8.868v6.264a1 1 0 01-1.447.894L15 14M5 18h8a2 2 0 002-2V8a2 2 0 00-2-2H5a2 2 0 00-2 2v8a2 2 0 002 2z"/>
+              </svg>
+            </div>
+            <p class="text-xs font-bold text-yellow-500 mb-1">3. Join the Call</p>
+            <p class="text-xs text-gray-400 leading-snug">Join at the scheduled time using the meeting link.</p>
+          </div>
+
         </div>
       </div>
 
       <!-- WhatsApp Card -->
-      <div class="bg-gradient-to-r from-pink-50 to-orange-50 border border-orange-100 rounded-2xl p-5 flex flex-col sm:flex-row items-center gap-4 mb-7 text-left">
-        <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" alt="WhatsApp" class="w-14 h-14 shrink-0" />
-        <div class="flex-1 text-center sm:text-left">
-          <h4 class="text-base font-bold text-gray-900 mb-1">Stay Connected on WhatsApp</h4>
-          <p class="text-sm text-gray-500 mb-3">Join our WhatsApp community for tips, resources and updates.</p>
-          <a
-            href="https://chat.whatsapp.com/EovrjrNnMTV1pE3IEFxH8T?s=cl&p=a&mlu=1"
-            target="_blank"
-            rel="noopener noreferrer"
-            class="inline-flex items-center justify-center gap-2 w-full sm:w-auto bg-gradient-to-r from-pink-500 via-orange-400 to-yellow-400 text-white text-sm font-bold px-6 py-3 rounded-full hover:opacity-90 transition-opacity"
-          >
-            <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 24 24">
-              <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/>
+      <div class="mx-6 mb-7 bg-pink-50 rounded-2xl border border-pink-100 p-5">
+        <div class="flex items-center gap-4 mb-4">
+          <div class="w-14 h-14 shrink-0">
+            <svg viewBox="0 0 175.216 175.552" xmlns="http://www.w3.org/2000/svg">
+              <defs><linearGradient id="wa-grad" x1="85.915" x2="86.535" y1="32.567" y2="137.092" gradientUnits="userSpaceOnUse"><stop offset="0" stop-color="#57d163"/><stop offset="1" stop-color="#23b33a"/></linearGradient></defs>
+              <path d="M87.184 25.227c-33.733 0-61.166 27.423-61.178 61.13a60.98 60.98 0 0 0 9.349 32.535l1.455 2.313-6.179 22.558 23.146-6.069 2.235 1.324c9.387 5.571 20.15 8.517 31.126 8.523h.023c33.707 0 61.14-27.426 61.153-61.135.013-16.337-6.329-31.693-17.846-43.213-11.519-11.52-26.84-17.876-43.284-17.876z" fill="url(#wa-grad)"/>
+              <path d="M87.184 25.227c-33.733 0-61.166 27.423-61.178 61.13a60.98 60.98 0 0 0 9.349 32.535l1.455 2.313-6.179 22.558 23.146-6.069 2.235 1.324c9.387 5.571 20.15 8.517 31.126 8.523h.023c33.707 0 61.14-27.426 61.153-61.135.013-16.337-6.329-31.693-17.846-43.213-11.519-11.52-26.84-17.876-43.284-17.876z" fill="none"/>
+              <path d="M68.772 55.603c-1.378-3.061-2.828-3.123-4.137-3.176l-3.524-.043c-1.226 0-3.218.46-4.902 2.3s-6.435 6.287-6.435 15.332 6.588 17.785 7.506 19.013 12.718 20.381 31.405 27.75c15.529 6.124 18.689 4.906 22.061 4.6s10.877-4.447 12.408-8.74 1.532-7.971 1.073-8.74-1.685-1.226-3.524-2.146-10.877-5.367-12.562-5.981-2.91-.919-4.137.921-4.746 5.979-5.819 7.206-2.144 1.381-3.984.462-7.76-2.861-14.784-9.124c-5.465-4.873-9.154-10.891-10.228-12.73s-.114-2.835.808-3.751c.825-.824 1.838-2.147 2.759-3.22s1.224-1.84 1.836-3.065.307-2.301-.153-3.22-4.032-10.011-5.666-13.647z" fill="#fff" fill-rule="evenodd"/>
             </svg>
-            JOIN WHATSAPP COMMUNITY
-          </a>
+          </div>
+          <div class="text-left">
+            <h4 class="text-base font-extrabold text-gray-900 leading-tight mb-1">Stay Connected on WhatsApp</h4>
+            <p class="text-sm text-gray-500">Join our WhatsApp community for tips, resources and updates.</p>
+          </div>
         </div>
+        <a
+          href="https://chat.whatsapp.com/EovrjrNnMTV1pE3IEFxH8T?s=cl&p=a&mlu=1"
+          target="_blank"
+          rel="noopener noreferrer"
+          class="flex items-center justify-center gap-2 w-full bg-gradient-to-r from-pink-500 via-orange-400 to-yellow-400 text-white text-sm font-extrabold tracking-wide px-6 py-3.5 rounded-full hover:opacity-90 transition-opacity"
+        >
+          <svg class="w-4 h-4 shrink-0" fill="currentColor" viewBox="0 0 24 24">
+            <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/>
+          </svg>
+          JOIN WHATSAPP COMMUNITY
+        </a>
       </div>
 
       <!-- Footer note -->
-      <p class="text-sm text-gray-400">
-        <span class="text-pink-400">♥</span> We appreciate your trust in Niirmaan Growth Hub.<br />
-        Let's build something amazing together!
-      </p>
+      <div class="pb-8 text-center px-8">
+        <p class="text-sm text-gray-400">
+          <span class="text-pink-400">&#9829;</span> We appreciate your trust in Niirmaan Growth Hub.<br />
+          Let's build something amazing together!
+        </p>
+      </div>
 
     </div>
   </div>
