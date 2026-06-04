@@ -1,0 +1,70 @@
+---
+import SectionHeading from './SectionHeading.astro';
+
+const faqs = [
+  {
+    q: "How long does it take to build a website?",
+    a: "Most websites are delivered within 7–14 working days depending on complexity and your feedback speed.",
+  },
+  {
+    q: "Will my website work on mobile devices?",
+    a: "Yes, every website we build is fully mobile-responsive and tested across all screen sizes.",
+  },
+  {
+    q: "Do you provide hosting and domain?",
+    a: "Yes, we can help with domain registration and reliable hosting setup as part of the package.",
+  },
+  {
+    q: "Do you provide SEO services?",
+    a: "Yes, all our websites are built with on-page SEO best practices. We also offer dedicated SEO packages.",
+  },
+  {
+    q: "Can you redesign my existing website?",
+    a: "Absolutely. We specialise in redesigning outdated websites that aren't converting visitors into leads.",
+  },
+  {
+    q: "Will I be able to update my website?",
+    a: "Yes, we provide training and a simple CMS so you can make updates independently when needed.",
+  },
+];
+---
+<section id="faq" class="py-16 bg-gray-50">
+  <div class="max-w-5xl mx-auto px-4">
+    <SectionHeading title="FREQUENTLY ASKED QUESTIONS" />
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-3">
+      {faqs.map((faq, i) => (
+        <div class="faq-item bg-white border border-gray-100 rounded-xl shadow-sm overflow-hidden">
+          <button
+            class="faq-trigger w-full flex items-center justify-between px-5 py-4 text-left text-sm font-semibold text-gray-800 hover:text-orange-500 transition-colors gap-3"
+            data-index={i}
+          >
+            <span>{faq.q}</span>
+            <svg
+              class="faq-icon w-4 h-4 text-gray-400 flex-shrink-0 transition-transform duration-200"
+              fill="none"
+              stroke="currentColor"
+              viewBox="0 0 24 24"
+            >
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+            </svg>
+          </button>
+          <div class="faq-answer hidden px-5 pb-4 text-sm text-gray-600 leading-relaxed">
+            {faq.a}
+          </div>
+        </div>
+      ))}
+    </div>
+  </div>
+</section>
+
+<script>
+  document.querySelectorAll<HTMLButtonElement>('.faq-trigger').forEach(trigger => {
+    trigger.addEventListener('click', () => {
+      const item = trigger.closest('.faq-item');
+      const answer = item?.querySelector('.faq-answer');
+      const icon = trigger.querySelector('.faq-icon');
+      answer?.classList.toggle('hidden');
+      icon?.classList.toggle('rotate-180');
+    });
+  });
+</script>
