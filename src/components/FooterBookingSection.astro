@@ -1,71 +1,33 @@
 ---
-import GradientButton from './GradientButton.astro';
-
 const socials = [
   { label: "F", title: "Facebook" },
   { label: "I", title: "Instagram" },
   { label: "T", title: "Twitter" },
   { label: "L", title: "LinkedIn" },
 ];
-
-const timeSlots = ["10:00 AM", "11:00 AM", "12:00 PM", "2:00 PM", "3:00 PM", "4:00 PM"];
 ---
 <section id="booking" class="py-16 bg-gradient-to-br from-blue-50 to-sky-100">
   <div class="max-w-6xl mx-auto px-4">
-    <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-start">
 
-      <!-- Left: Brand -->
-      <div>
-        <img src="/NGH_LOGO.png" alt="Niirmaan Growth Hub" class="h-24 w-auto mb-3" />
-        <p class="text-xs text-gray-500 mb-6 leading-relaxed">
-          360&deg; Digital Solutions Agency<br />
-          Web Development | SEO | Digital Marketing | Branding<br />
-          Helping businesses grow with smart digital solutions
-        </p>
-        <div class="flex items-center gap-3">
-          {socials.map(s => (
-            <a
-              href="#"
-              title={s.title}
-              class="w-8 h-8 rounded-full bg-gradient-to-br from-pink-500 to-orange-400 flex items-center justify-center text-white text-xs font-bold hover:opacity-80 transition-opacity"
-            >
-              {s.label}
-            </a>
-          ))}
-        </div>
+    <!-- Brand -->
+    <div class="flex flex-col items-center text-center">
+      <img src="/NGH_LOGO.png" alt="Niirmaan Growth Hub" class="h-24 w-auto mb-3" />
+      <p class="text-xs text-gray-500 mb-6 leading-relaxed">
+        360&deg; Digital Solutions Agency<br />
+        Web Development | SEO | Digital Marketing | Branding<br />
+        Helping businesses grow with smart digital solutions
+      </p>
+      <div class="flex items-center gap-3">
+        {socials.map(s => (
+          <a
+            href="#"
+            title={s.title}
+            class="w-8 h-8 rounded-full bg-gradient-to-br from-pink-500 to-orange-400 flex items-center justify-center text-white text-xs font-bold hover:opacity-80 transition-opacity"
+          >
+            {s.label}
+          </a>
+        ))}
       </div>
-
-      <!-- Right: Booking widget -->
-      <div class="bg-white rounded-2xl shadow-md p-6 border border-gray-100">
-        <h3 class="text-base font-extrabold text-gray-900 mb-1">BOOK YOUR FREE CONSULTATION NOW</h3>
-        <p class="text-xs text-gray-500 mb-5">Select a time that works best for you.</p>
-
-        <!-- Meeting options -->
-        <div class="flex gap-3 mb-5">
-          <div class="flex-1 bg-sky-50 border border-sky-200 rounded-lg p-3 text-center">
-            <div class="text-xs font-semibold text-sky-700">30 Min Meeting</div>
-            <div class="text-xs text-gray-400 mt-0.5">30 min</div>
-          </div>
-          <div class="flex-1 bg-orange-50 border border-orange-200 rounded-lg p-3 text-center">
-            <div class="text-xs font-semibold text-orange-600">Free Website Growth</div>
-            <div class="text-xs text-gray-400 mt-0.5">Consultation</div>
-          </div>
-        </div>
-
-        <!-- Time slots -->
-        <div class="grid grid-cols-3 gap-2 mb-5">
-          {timeSlots.map(time => (
-            <button class="border border-gray-200 rounded-lg py-2 text-xs text-gray-700 hover:border-orange-400 hover:text-orange-500 transition-colors font-medium">
-              {time}
-            </button>
-          ))}
-        </div>
-
-        <GradientButton href="#" class="w-full text-sm py-3.5">
-          BOOK FREE CONSULTATION
-        </GradientButton>
-      </div>
-
     </div>
 
     <!-- Footer bottom bar -->
