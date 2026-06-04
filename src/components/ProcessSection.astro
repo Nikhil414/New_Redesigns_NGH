@@ -12,7 +12,7 @@ const steps = [
 <section id="process" class="py-10 bg-white">
   <div class="max-w-6xl mx-auto px-4">
     <SectionHeading title="OUR PROCESS" />
-    <div class="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-5 gap-5">
+    <div class="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-5 gap-5 [&>*:last-child]:col-span-2 sm:[&>*:last-child]:col-span-1">
       {steps.map(step => (
         <div class="bg-white border border-gray-100 rounded-xl p-5 shadow-sm text-center hover:shadow-md transition-shadow">
           <div class={`w-10 h-10 rounded-full ${step.color} flex items-center justify-center text-white font-bold text-sm mx-auto mb-3`}>
