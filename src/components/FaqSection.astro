@@ -35,7 +35,7 @@ const faqs = [
       {faqs.map((faq, i) => (
         <div class="faq-item bg-white border border-gray-100 rounded-xl shadow-sm overflow-hidden">
           <button
-            class="faq-trigger w-full flex items-center justify-between px-5 py-4 text-left text-sm font-semibold text-gray-800 hover:text-orange-500 transition-colors gap-3"
+            class="faq-trigger w-full flex items-center justify-between px-5 py-4 text-left text-base font-semibold text-gray-800 hover:text-orange-500 transition-colors gap-3"
             aria-expanded="false"
           >
             <span>{faq.q}</span>
@@ -48,7 +48,7 @@ const faqs = [
               <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
             </svg>
           </button>
-          <div class="faq-answer hidden px-5 pb-4 text-sm text-gray-600 leading-relaxed">
+          <div class="faq-answer hidden px-5 pb-4 text-base text-gray-600 leading-relaxed">
             {faq.a}
           </div>
         </div>
