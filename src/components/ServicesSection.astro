@@ -28,13 +28,13 @@ const services = [
   },
 ];
 ---
-<section id="services" class="py-16 bg-gray-50">
+<section id="services" class="py-10 bg-gray-50">
   <div class="max-w-6xl mx-auto px-4">
     <SectionHeading title="WHAT WE BUILD" />
     <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
       {services.map(service => (
-        <div class="bg-white border border-gray-100 rounded-xl p-6 shadow-sm hover:shadow-md transition-shadow">
-          <div class={`mb-4 ${service.color}`}>
+        <div class="bg-white border border-gray-100 rounded-xl p-5 shadow-sm hover:shadow-md transition-shadow">
+          <div class={`mb-3 ${service.color}`}>
             <svg class="w-10 h-10" fill="none" stroke="currentColor" viewBox="0 0 24 24">
               <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d={service.path} />
             </svg>
