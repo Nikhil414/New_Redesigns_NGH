@@ -28,7 +28,7 @@ const services = [
   },
 ];
 ---
-<section id="services" class="py-10 bg-gray-50">
+<section id="services" class="pt-4 pb-10 sm:py-10 bg-gray-50">
   <div class="max-w-6xl mx-auto px-4">
     <SectionHeading title="WHAT WE BUILD" />
     <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
@@ -39,8 +39,8 @@ const services = [
               <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d={service.path} />
             </svg>
           </div>
-          <h3 class="text-base font-semibold text-gray-800 mb-2">{service.title}</h3>
-          <p class="text-sm text-gray-500 leading-relaxed">{service.desc}</p>
+          <h3 class="text-lg font-bold text-gray-800 mb-2">{service.title}</h3>
+          <p class="text-base text-gray-500 leading-relaxed">{service.desc}</p>
         </div>
       ))}
     </div>

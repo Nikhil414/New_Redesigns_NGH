@@ -3,50 +3,62 @@ import SectionHeading from './SectionHeading.astro';
 
 const painPoints = [
   {
-    color: "text-red-400",
-    path: "M6 18L18 6M6 6l12 12",
+    image: "/Professional_Website.png",
     title: "No Professional Website",
     desc: "Customers can't find you online.",
+    accent: "border-red-400",
+    badge: "bg-red-100 text-red-500",
   },
   {
-    color: "text-orange-400",
-    path: "M9.172 16.172a4 4 0 015.656 0M9 10h.01M15 10h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z",
+    image: "/Outdated_Website.png",
     title: "Outdated Website That Doesn't Convert",
     desc: "Old design = lost trust and sales.",
+    accent: "border-orange-400",
+    badge: "bg-orange-100 text-orange-500",
   },
   {
-    color: "text-yellow-500",
-    path: "M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z",
+    image: "/Slow_Loading_Website.png",
     title: "Slow Loading Pages",
-    desc: "Slow websites lose visitors.",
+    desc: "Slow websites lose visitors instantly.",
+    accent: "border-yellow-400",
+    badge: "bg-yellow-100 text-yellow-600",
   },
   {
-    color: "text-blue-400",
-    path: "M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z",
+    image: "/No_Leads.png",
     title: "No Leads From Online Searches",
     desc: "You're invisible where it matters most.",
+    accent: "border-blue-400",
+    badge: "bg-blue-100 text-blue-500",
   },
   {
-    color: "text-purple-400",
-    path: "M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0z",
+    image: "/Customer_Choose.png",
     title: "Customers Choose Competitors",
     desc: "They go with the business that looks professional.",
+    accent: "border-purple-400",
+    badge: "bg-purple-100 text-purple-500",
   },
 ];
 ---
-<section class="py-10 bg-white">
+<section class="py-12 bg-gray-50">
   <div class="max-w-6xl mx-auto px-4">
     <SectionHeading title="IS YOUR BUSINESS LOSING CUSTOMERS ONLINE?" />
-    <div class="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-5 gap-5 [&>*:last-child]:col-span-2 sm:[&>*:last-child]:col-span-1 sm:[&>*:last-child]:col-start-2 lg:[&>*:last-child]:col-start-auto">
+    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-5">
       {painPoints.map(point => (
-        <div class="bg-white border border-gray-100 rounded-xl p-5 shadow-sm text-center hover:shadow-md transition-shadow">
-          <div class={`flex justify-center mb-3 ${point.color}`}>
-            <svg class="w-10 h-10" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d={point.path} />
-            </svg>
+        <div class={`bg-white rounded-2xl shadow-sm border-t-4 ${point.accent} overflow-hidden hover:shadow-md transition-shadow flex flex-col`}>
+          <!-- Image -->
+          <div class="w-full h-44 bg-gray-950 flex items-center justify-center overflow-hidden">
+            <img
+              src={point.image}
+              alt={point.title}
+              class="w-full h-full object-contain"
+              loading="lazy"
+            />
           </div>
-          <h3 class="text-sm font-semibold text-gray-800 mb-1.5">{point.title}</h3>
-          <p class="text-sm text-gray-500">{point.desc}</p>
+          <!-- Text -->
+          <div class="p-4 flex flex-col flex-1">
+            <h3 class="text-base font-bold text-gray-800 mb-1.5 leading-snug">{point.title}</h3>
+            <p class="text-sm text-gray-500 leading-relaxed">{point.desc}</p>
+          </div>
         </div>
       ))}
     </div>

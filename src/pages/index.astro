@@ -9,7 +9,6 @@ import ProcessSection from '../components/ProcessSection.astro';
 import ResultsSection from '../components/ResultsSection.astro';
 import OfferSection from '../components/OfferSection.astro';
 import FaqSection from '../components/FaqSection.astro';
-import FooterBookingSection from '../components/FooterBookingSection.astro';
 ---
 <BaseLayout>
   <Navbar />
@@ -21,5 +20,16 @@ import FooterBookingSection from '../components/FooterBookingSection.astro';
   <ResultsSection />
   <OfferSection />
   <FaqSection />
-  <FooterBookingSection />
+
+  <!-- Sticky bottom CTA -->
+  <div class="fixed bottom-0 left-0 right-0 z-50 px-4 pb-4 pt-2 bg-gradient-to-t from-white/90 to-transparent pointer-events-none">
+    <a
+      href="https://calendly.com/nirale-niirmaangrowthhub/free-website-audit-growth-strategy-call?month=2026-06"
+      target="_blank"
+      rel="noopener noreferrer"
+      class="pointer-events-auto flex items-center justify-center gap-2 w-full max-w-md mx-auto bg-gradient-to-r from-pink-500 via-orange-400 to-yellow-400 text-white text-sm font-extrabold tracking-wide rounded-full py-4 shadow-lg hover:opacity-90 transition-opacity"
+    >
+      📅 Book Free Consultation
+    </a>
+  </div>
 </BaseLayout>
